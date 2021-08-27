@@ -83,8 +83,8 @@ function responseAction(response) {
     try {
         const responseObject = JSON.parse(response);
         if (responseObject.error) {
-
             showMessage('error', responseObject.error);
+            return;
         }
 
         showMessage('success', 'Paslauga sekmingai prideta!');
